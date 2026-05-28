@@ -1,15 +1,19 @@
-Terraform Interview Notes
-200 Questions — Hindi-Hinglish mein | Dilip Bhai ki Practice File
-Beginner se Advanced tak | Real Project Answers ke saath
+# Terraform Interview Notes
 
-Section 1: Core Concepts 
-Q1. Terraform kya hota hai?
+
+# Section 1: Core Concepts 
+# Q1. Terraform kya hota hai?
 
 Terraform ek IaC (Infrastructure as Code) tool hai jo declarative tarike se kaam karta hai. Matlab tum batao KYA chahiye, aur Terraform khud figure out karta hai KAISE banayega. Yeh ek state file maintain karta hai jisme sab cloud resources ka record hota hai. Azure, AWS, GCP — sab ke saath kaam karta hai.
+
 Tip: Interview mein bolo: "Mere project mein main Terraform use karta hoon Azure resources provision karne ke liye — VMs, VNet, Key Vault, App Service — aur yeh Azure DevOps pipeline se connected hai automatic deployment ke liye."
-Q2. IaC (Infrastructure as Code) kya hota hai?
+
+# Q2. IaC (Infrastructure as Code) kya hota hai?
+
 IaC matlab infrastructure ko code se manage karna — manual kaam ki jagah. Iska faida yeh hai ki sab kuch version control mein hota hai, reproducible hota hai, aur team ke saath share kar sakte ho. Ek baar likho, baar baar use karo.
-Q3. Terraform kya karta hai exactly?
+
+# Q3. Terraform kya karta hai exactly?
+
 Terraform tumhari HCL configuration files padhta hai, compare karta hai current state se, aur phir cloud provider (jaise Azure) ke API call karke resources create, update, ya delete karta hai. Sab automatic!
 Q4. Terraform kyun use karein?
 Kyunki manual kaam error-prone hota hai aur track nahi hota. Terraform se: automation milti hai, consistency aati hai, team collaboration hoti hai, aur agar kuch galat ho toh rollback bhi kar sakte ho Git se. Ek baar likho — har jagah use karo.
