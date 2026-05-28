@@ -25,12 +25,23 @@ provider "azurerm" {
 
 ```hcl
 resource "azurerm_resource_group" "rg" {
-  name = "my-rg"
+  name = "dilip-rg"
   location = "West Europe"
 }
 ```
+# Create a storage account (explicity)
+```hcl
+resource "azurerm_storage_account" "dilipk" {
+depends_on = [azurerm_resource_group.rg]
+ name                     = "storagegold"
+ resource_group_name      = "dilip-rg"
+ location                 = "West Europe"
+  account_tier             = "Standard"
+  account_replication_type = "GRS"
+  }
+ ```
 
-# Create a storage account
+# Create a storage account (implicity)
 
 ```hcl
 resource "azurerm_storage_account" "dilipk" {
@@ -41,3 +52,16 @@ resource "azurerm_storage_account" "dilipk" {
   account_replication_type = "GRS"
   }
   ```
+# Create a Contanier 
+```hcl
+resource "azurerm_storage_container" "dilipk" {
+name                     = "dilu"
+storage_account_id = azurerm_storage_account.dilipk.id
+container_acces_type = "private"
+}
+ ```
+
+
+
+
+
