@@ -1,6 +1,6 @@
-# DevOps Master Journey 🚀☁️
+# DevOps Journey With Dilip Routray12 🚀☁️
 
-Welcome to the official **DevOps Master Journey** repository!
+Welcome to the official **DevOps_Journey** repository!
 This repository is a complete hands-on learning hub designed to practice and master modern DevOps tools, cloud technologies, automation, and infrastructure management.
 
 This repository contains structured learning materials, practice code, projects, notes, and real-world implementations for:
@@ -144,7 +144,7 @@ The goal of this repository is to become a complete DevOps Engineer by practicin
 
 # 👨‍💻 Author
 
-Vikas
+Dilip Routray
 
 ---
 
