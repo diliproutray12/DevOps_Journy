@@ -8,18 +8,18 @@ terraform {
   azurerm = {
   source  = "hashicorp/azurerm"
       version = "=4.70.0"
-      }
-      }
-      }
+}
+ }
+  }
 ```
 
 # Configure the Microsoft Azure Provider
 
+```hcl
 provider "azurerm" {
-
  features {}
- 
-}
+ }
+```
 
 # Create a resource group
 
