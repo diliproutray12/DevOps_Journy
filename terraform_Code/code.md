@@ -28,12 +28,9 @@ provider "azurerm" {
 
 # Create a resource group
 
-resource "azurerm_resource_group" "dilip" {
-
-  name     = "dilip-rg"
-  
+resource "azurerm_resource_group" "rg" {
+  name = "my-rg"
   location = "West Europe"
-  
 }
 
 # Create a storage account
