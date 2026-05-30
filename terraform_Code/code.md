@@ -69,7 +69,7 @@ backend "azurerm" {
   key                  = "dilip.tfstate"
 }
 ```
-# Terraform variables Type1 RG
+# Terraform variables Type1 RG or terraform.tfvars ko variable values file bloti hai.
 # main.tf
 ```hcl
 resource "azurerm_resource_group" "name"{
@@ -86,10 +86,10 @@ variable "rglocation"{}
 
 ```
 # Terraform.tfvars
-
-dev_rg = "eastus"
-pord_rg = "centralindia"
-
+```hcl
+dilip = "rg1"
+rglocation  = "centralindia"
+```
 
 
 
