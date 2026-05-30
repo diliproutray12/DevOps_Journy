@@ -69,7 +69,7 @@ backend "azurerm" {
   key                  = "dilip.tfstate"
 }
 ```
-# Terraform variables Type1 RG or terraform.tfvars ko variable values file bloti hai.
+# Terraform variables Type of RG or terraform.tfvars ko variable values file bloti hai.
 # main.tf
 ```hcl
 resource "azurerm_resource_group" "name"{
@@ -87,10 +87,31 @@ variable "rglocation"{}
 ```
 # Terraform.tfvars
 ```hcl
-dilip = "rg1"
+dilip       = "rg1"
 rglocation  = "centralindia"
 ```
+# List variable with For_each bolti hai 
+# main.tf
+```hcl
+resource "azurerm_resource_group" "name"{
+for_each = toset (var.dilip)
+name = each.key
+location = var.rglocation
+```
+# varieble.tf
+```hcl
+variable "dilip"{}   
+variable "rglocation"{}
 
+(first varieble diclare dilip name then toset use to main.tf file var.dilip/location=var.rglocation, then assined to terraform.tfvars)
+```
+# Terraform.tfvars
+```hcl
+dilip = ["rg1", "rg2", "rg3"]
+rglocation = "eastus"
+
+(one location 3 rg)
+```
 
 
 
