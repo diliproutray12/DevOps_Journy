@@ -69,5 +69,32 @@ backend "azurerm" {
   key                  = "dilip.tfstate"
 }
 ```
+# Terraform variables Type1 RG
+# main.tf
+```hcl
+resource "azurerm_resource_group" "name"{
+name = var.dilip
+location = var.rglocation
+}
+```
+# varieble.tf
+```hcl
+variable "dilip"{}   
+variable "rglocation"{}
+
+(first varieble diclare dilip name then use to main.tf file var.dilip/location=var.rglocation, then assined to terraform.tfvars)
+
+```
+# Terraform.tfvars
+
+dev_rg = "eastus"
+pord_rg = "centralindia"
+
+
+
+
+
+
+
 
 
