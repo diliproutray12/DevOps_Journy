@@ -73,7 +73,7 @@ backend "azurerm" {
 # main.tf
 ```hcl
 resource "azurerm_resource_group" "name"{
-name = var.dilip
+name     = var.dilip
 location = var.rglocation
 }
 ```
@@ -95,8 +95,9 @@ rglocation  = "centralindia"
 ```hcl
 resource "azurerm_resource_group" "name"{
 for_each = toset (var.dilip)
-name = each.key
+name     = each.key
 location = var.rglocation
+}
 ```
 # varieble.tf
 ```hcl
@@ -107,15 +108,37 @@ variable "rglocation"{}
 ```
 # Terraform.tfvars
 ```hcl
-dilip = ["rg1", "rg2", "rg3"]
-rglocation = "eastus"
+dilip       = ["rg1", "rg2", "rg3"]
+rglocation  = "eastus"
 
 (one location 3 rg)
 ```
 
+# For_each with Map variable (priority 1)
+# main.tf
+```hcl
+resource "azurerm_resource_group" "name"{
+for_each = var.dilip
+name     = each.key
+location = each.value
+}
+```
+# varieble.tf
+```hcl
+variable "dilip"{}
 
+(foreach hoga loop then each.key hoga resource-name like rg1,rg2,rg3, then each.value hoga loation like "eastus", "centralindia","westus")
+```
+# Terraform.tfvars
+```hcl
+dilip = {
+rg1 = "eastus"
+rg2 = "centralindia"
+rg3 = "westus"
+}
 
-
+(dilip = {} map variable)
+```
 
 
 
