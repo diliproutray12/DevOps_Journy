@@ -138,7 +138,7 @@ rg3 = "westus"
 }
 
 (dilip = {} map variable)
-<<<<<<< HEAD
+
 ```
 # Resource Folder 1 
 ```hcl
