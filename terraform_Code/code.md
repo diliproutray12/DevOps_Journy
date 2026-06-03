@@ -143,6 +143,7 @@ rg3 = "westus"
 resource "azurerm_resource_group" "rg"{
   name = "rgdilip"
   location = "eastus"
+  manage by 
 }
 ```
 
