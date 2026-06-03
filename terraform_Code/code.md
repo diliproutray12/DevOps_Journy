@@ -139,5 +139,17 @@ rg3 = "westus"
 
 (dilip = {} map variable)
 ```
+# Resource Folder 1 
+```hcl
+resource "azurerm_resource_group" "name"{
+  for_each = {
+    diliprg = "eastus"
+    diliprg1 = "westus"
+  }
+  name = each.key
+  location = each.value
+}
+```
+
 
 
