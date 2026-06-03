@@ -139,11 +139,5 @@ rg3 = "westus"
 
 (dilip = {} map variable)
 ```
-```hcl
-resource "azurerm_resource_group" "rg"{
-  name = "rgdilip"
-  location = "eastus"
-  manage by 
-}
-```
+
 
