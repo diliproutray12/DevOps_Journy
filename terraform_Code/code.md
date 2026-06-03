@@ -140,10 +140,7 @@ rg3 = "westus"
 (dilip = {} map variable)
 ```
 resource "azurerm_resource_group" "rg"{
-
-  name = "rgdilip"
-  
-
+  name = "rgdilip"ggg
   location = "eastus"
 }
 
