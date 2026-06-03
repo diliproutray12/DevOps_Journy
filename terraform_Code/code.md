@@ -143,6 +143,7 @@ resource "azurerm_resource_group" "rg"{
 
   name = "rgdilip"
   
+
   location = "eastus"
 }
 
