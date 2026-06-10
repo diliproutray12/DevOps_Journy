@@ -138,7 +138,7 @@ rg3 = "westus"
 }
 
 (dilip = {} map variable)
-<<<<<<< HEAD
+
 ```
 # Resource Folder 1 
 ```hcl
@@ -151,10 +151,7 @@ resource "azurerm_resource_group" "name"{
   location = each.value
 }
 ```
-=======
 
-
->>>>>>> ab420a17167f09a431db8db01fa07a00e4721951
 
 
 
